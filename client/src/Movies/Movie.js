@@ -45,7 +45,7 @@ export default class Movie extends React.Component {
           Save
         </div>
         {/* - Add a button in the movie component that routes you to your new route with the movies's id as the URL param */}
-        <button onClick={UpdateMovie}>Update Movie</button>
+        <button onClick={() => this.props.history.push(`/update-movie/${this.state.movie.id}`)}>Update Movie</button>
       </div>
     );
   }
